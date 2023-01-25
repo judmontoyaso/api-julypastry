@@ -19,11 +19,11 @@ const port = process.env.PORT || 5000;
 const app = Express();
 
 app.use(Express.json());
-app.use(Cors({origin: 'https://july-pastry-app.vercel.app'}));
+app.use(Cors({origin: '*'}));
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'https://july-pastry-app.vercel.app');
+  res.setHeader('Access-Control-Allow-Origin', '*');
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
